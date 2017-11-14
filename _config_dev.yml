@@ -1,0 +1,105 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Developer
+description: >
+  Description
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
+google_analytics: UA-79833310-3
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+exclude: [Gemfile, Gemfile.lock, CONTRIBUTING.md, README.md, vendor, work]
+
+defaults:
+- scope:
+    path: _devguides
+    type: devguides
+  values:
+    layout: devguides
+    sectionid: devguides
+ 
+- scope:
+    path: _getstarted
+    type: getstarted
+  values:
+    layout: getstarted
+    sectionid: getstarted
+  
+- scope:
+    path: _reference
+    type: reference
+  values:
+    layout: reference
+    sectionid: reference
+
+- scope:
+    path: _source
+    type: source
+  values:
+    layout: source
+    sectionid: source
+   
+- scope:
+    path: _download
+    type: download
+  values:
+    layout: download
+    sectionid: download
+  
+- scope:
+    path: _devtools
+    type: devtools
+  values:
+    layout: devtools
+    sectionid: devtools
+    
+- scope:
+    path: _guidelines
+    type: guidelines
+  values:
+    layout: guidelines
+    sectionid: guidelines
+    
+- scope:
+    path: _tutorials
+    type: tutorials
+  values:
+    layout: tutorials
+    sectionid: tutorials 
+    
+collections:
+  posts:
+    permalink: /news/:year/:month/:day/:title/
+  devguides:
+    permalink: /devguides/:path/
+    output: true 
+  getstarted:
+    permalink: /getstarted/:path/
+    output: true 
+  reference:
+    permalink: /reference/:path/
+    output: true 
+  source:
+    permalink: /source/:path/
+    output: true
+  download:
+    permalink: /download/:path/
+    output: true
+  devtools:
+    permalink: /devtools/:path/
+    output: true  
+  guidelines:
+    permalink: /guidelines/:path/
+    output: true  
+  tutorials:
+    permalink: /tutorials/:path/
+    output: true  
